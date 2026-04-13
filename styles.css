@@ -1,172 +1,155 @@
 :root {
-  font-family: Inter, system-ui, sans-serif;
-  color: #111827;
-  background: #e5e7eb;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
 }
 
-* { box-sizing: border-box; }
-body { margin: 0; }
+* {
+  box-sizing: border-box;
+}
 
-.topbar {
-  background: #020a3d;
+body {
+  margin: 0;
+}
+
+.hero {
+  background: linear-gradient(145deg, #0ea5e9, #1d4ed8);
   color: white;
-  padding: 0.8rem 2rem;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.brand {
+  padding: 3rem 1.5rem;
   display: flex;
+  justify-content: space-between;
+  gap: 1rem;
   align-items: center;
-  gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
-.brand-logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #d4af37;
+.hero h1 {
+  margin: 0.4rem 0;
+  max-width: 28ch;
 }
 
-.topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; }
-.topbar a { color: #dbeafe; text-decoration: none; }
-
-.login-btn,
-button {
-  border: none;
-  border-radius: 999px;
-  padding: 0.55rem 1rem;
-  background: #3b82f6;
-  color: white;
-  font-weight: 600;
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0;
 }
 
-.container {
-  max-width: 1240px;
-  margin: 1rem auto 2.5rem;
+main {
+  max-width: 1100px;
+  margin: 1.5rem auto 2.5rem;
   padding: 0 1rem;
-}
-
-.welcome-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 1rem;
 }
 
-.intro-card,
-.calendar-card,
-.program-card {
+.card {
   background: white;
-  border: 1px solid #cbd5e1;
-  border-radius: 14px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  padding: 1rem 1.2rem;
 }
 
-.intro-card {
-  position: relative;
-  min-height: 320px;
-  color: white;
+.calendar-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  overflow: hidden;
-  background: linear-gradient(145deg, #020a3d, #07134f);
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.intro-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("assets/protrading-logo.svg") center/cover no-repeat;
-  opacity: 0.15;
+.calendar-grid article,
+.lesson {
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 0.8rem;
+  background: #f0f9ff;
 }
 
-.intro-text {
-  position: relative;
-  z-index: 1;
-  padding: 1.2rem;
-}
-
-.intro-text h2 { font-size: 2rem; margin: 0.4rem 0; max-width: 18ch; }
-.eyebrow { text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.08em; color: #facc15; }
-
-.hero-logo {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.calendar-card { padding: 1rem; }
-.calendar-card h3 { margin-top: 0; }
-.calendar-card ul { margin: 0; padding-left: 1rem; display: grid; gap: 0.7rem; }
-
-.section-title { margin: 1.2rem 0 0.8rem; }
-
-.module-grid {
+.modules {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
 
-.module-cover {
-  height: 210px;
-  border-bottom: 1px solid #cbd5e1;
-  padding: 1rem;
-  color: white;
-  display: flex;
-  align-items: end;
-  font-size: 2rem;
-  font-weight: 800;
+.module-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0.8rem;
 }
 
-.module-cover.one { background: linear-gradient(145deg, #115e59, #14b8a6); }
-.module-cover.two { background: linear-gradient(145deg, #0f172a, #0891b2); }
-.module-cover.three { background: linear-gradient(145deg, #1d4ed8, #0ea5e9); }
-
-.program-body { padding: 1rem; }
-.progress {
-  height: 10px;
-  background: #e5e7eb;
-  border-radius: 999px;
-  overflow: hidden;
-  margin: 0.5rem 0 0.9rem;
+.module-card h3 {
+  margin-top: 0.2rem;
 }
 
-.progress span {
-  display: block;
-  height: 100%;
-  background: #6b7280;
+.lessons {
+  display: grid;
+  gap: 0.5rem;
 }
 
-.tag-list {
+.lesson h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.95rem;
+}
+
+.actions {
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
-  margin: 0.6rem 0 1rem;
 }
 
-.tag {
+button,
+.action {
+  border: none;
   border-radius: 999px;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.82rem;
-  font-weight: 700;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary,
+.action.video {
+  background: #2563eb;
   color: white;
 }
 
-.tag.video { background: #2563eb; }
-.tag.meditation { background: #0f766e; }
+.action.meditation {
+  background: #0f766e;
+  color: white;
+}
 
-@media (max-width: 940px) {
-  .welcome-grid,
-  .intro-card {
-    grid-template-columns: 1fr;
-  }
+dialog {
+  border: none;
+  border-radius: 12px;
+  width: min(92vw, 360px);
+}
 
-  .topbar {
-    grid-template-columns: 1fr;
-  }
+dialog::backdrop {
+  background: rgba(2, 6, 23, 0.7);
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+input {
+  width: 100%;
+  margin-top: 0.2rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 0.55rem;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+#loginStatus {
+  min-height: 1.2rem;
+  margin: 0;
+  color: #0f766e;
 }

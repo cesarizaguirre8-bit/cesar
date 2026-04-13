@@ -3,54 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pro Trading Academy USA | Mindset Psicotrading</title>
+    <title>Psicotrading Academy</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div class="brand">
-        <img src="assets/protrading-logo.svg" alt="Logo Pro Trading Academy USA" class="brand-logo" />
-        <strong>Pro Trading Academy USA</strong>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Curso de Mindset para Psicotrading</p>
+        <h1>Domina tu mente para operar con claridad y consistencia</h1>
+        <p>
+          Entrena tu plano mental de riqueza, aprende a fluir en el mercado e
+          integra hábitos de alto rendimiento para tu trading diario.
+        </p>
       </div>
-      <nav>
-        <a href="#">Mis programas</a>
-        <a href="#">Calendario eventos</a>
-        <a href="#">Catálogo</a>
-        <a href="#">Tu cuenta</a>
-      </nav>
-      <button class="login-btn">Iniciar sesión</button>
+      <button id="openLogin" class="primary">Iniciar sesión</button>
     </header>
 
-    <main class="container">
-      <section class="welcome-grid">
-        <article class="intro-card">
-          <div class="intro-text">
-            <p class="eyebrow">Mindset para psicotrading</p>
-            <h2>Domina tu mente para operar con claridad y consistencia</h2>
-            <p>
-              Entrenamiento guiado para traders: psicología, ejecución y hábitos
-              de alto rendimiento en 3 módulos.
-            </p>
-            <button>Ver programa</button>
-          </div>
-          <img src="assets/protrading-logo.svg" alt="Imagen visual Pro Trading Academy" class="hero-logo" />
-        </article>
-
-        <article class="calendar-card">
-          <h3>Clases en vivo esta semana</h3>
-          <ul>
-            <li><strong>Lunes 19:00</strong> · Preparación mental</li>
-            <li><strong>Miércoles 19:00</strong> · Fluir en mercado</li>
-            <li><strong>Viernes 18:30</strong> · Integración + Q&A</li>
-          </ul>
-        </article>
+    <main>
+      <section class="card" aria-labelledby="live-title">
+        <h2 id="live-title">Calendario de clases en vivo</h2>
+        <div class="calendar-grid">
+          <article>
+            <h3>Lunes</h3>
+            <p>19:00 - Sesión de preparación mental</p>
+          </article>
+          <article>
+            <h3>Miércoles</h3>
+            <p>19:00 - Laboratorio de psicotrading</p>
+          </article>
+          <article>
+            <h3>Viernes</h3>
+            <p>18:30 - Integración y preguntas en vivo</p>
+          </article>
+        </div>
       </section>
 
-      <section>
-        <h2 class="section-title">Tus módulos</h2>
-        <div id="moduleGrid" class="module-grid"></div>
+      <section class="card" aria-labelledby="modules-title">
+        <h2 id="modules-title">Módulos del programa</h2>
+        <div id="modulesContainer" class="modules"></div>
       </section>
     </main>
+
+    <dialog id="loginModal">
+      <form id="loginForm" method="dialog">
+        <h2>Iniciar sesión</h2>
+        <label>
+          Correo electrónico
+          <input type="email" name="email" placeholder="tu@email.com" required />
+        </label>
+        <label>
+          Contraseña
+          <input type="password" name="password" minlength="6" required />
+        </label>
+        <menu>
+          <button value="cancel">Cancelar</button>
+          <button class="primary" value="default">Entrar</button>
+        </menu>
+        <p id="loginStatus" role="status"></p>
+      </form>
+    </dialog>
 
     <script src="script.js"></script>
   </body>
