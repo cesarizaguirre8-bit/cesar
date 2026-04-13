@@ -1,22 +1,19 @@
 # cesar
 
-Plataforma inicial para un curso de mindset enfocado en psicotrading.
+Landing inicial para una plataforma estudiantil de psicotrading.
 
-## Qué incluye
-- Inicio de sesión con persistencia local (`localStorage`).
-- Calendario visual de clases en vivo para abril de 2026.
+## Incluye
+- Inicio de sesión con modal.
+- Calendario para clases en vivo.
 - 3 módulos del curso:
   1. Plano mental de la riqueza.
   2. Fluir para ganar en el trading.
   3. Integración al trading.
-- Cada módulo muestra 10 lecciones, y cada lección incluye:
-  - Botón de vídeo.
-  - Botón de meditación.
-  - Botón para marcar progreso.
-- Progreso general del curso (0/30 hasta 30/30) guardado en navegador.
+- Cada módulo contiene 10 lecciones con acceso a vídeo y meditación.
 
 ## Ejecutar localmente
+Abre `index.html` en el navegador o usa un servidor estático simple, por ejemplo:
+
 ```bash
 python3 -m http.server 8000
 ```
-Luego abre: `http://127.0.0.1:8000`.

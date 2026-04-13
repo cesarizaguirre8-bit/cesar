@@ -9,46 +9,38 @@
   <body>
     <header class="hero">
       <div>
-        <p class="eyebrow">Programa premium · Psicotrading</p>
-        <h1>Mindset para Trading: entrenamiento integral en 3 módulos</h1>
+        <p class="eyebrow">Curso de Mindset para Psicotrading</p>
+        <h1>Domina tu mente para operar con claridad y consistencia</h1>
         <p>
-          Una plataforma para transformar tu psicología operativa con clases en
-          vivo, vídeos guiados y meditaciones aplicadas al mercado.
+          Entrena tu plano mental de riqueza, aprende a fluir en el mercado e
+          integra hábitos de alto rendimiento para tu trading diario.
         </p>
       </div>
-      <div class="hero-actions">
-        <button id="openLogin" class="primary">Iniciar sesión</button>
-        <button id="logoutButton" class="ghost hidden">Cerrar sesión</button>
-      </div>
+      <button id="openLogin" class="primary">Iniciar sesión</button>
     </header>
 
     <main>
-      <section id="welcomeCard" class="card">
-        <h2>Bienvenido/a al curso</h2>
-        <p>
-          Ingresa con tu correo para desbloquear el calendario, los 3 módulos y
-          las 30 lecciones (vídeo + meditación).
-        </p>
+      <section class="card" aria-labelledby="live-title">
+        <h2 id="live-title">Calendario de clases en vivo</h2>
+        <div class="calendar-grid">
+          <article>
+            <h3>Lunes</h3>
+            <p>19:00 - Sesión de preparación mental</p>
+          </article>
+          <article>
+            <h3>Miércoles</h3>
+            <p>19:00 - Laboratorio de psicotrading</p>
+          </article>
+          <article>
+            <h3>Viernes</h3>
+            <p>18:30 - Integración y preguntas en vivo</p>
+          </article>
+        </div>
       </section>
 
-      <section id="dashboard" class="hidden" aria-live="polite">
-        <section class="card" aria-labelledby="live-title">
-          <div class="row-between">
-            <h2 id="live-title">Calendario de clases en vivo</h2>
-            <span id="calendarLabel" class="badge"></span>
-          </div>
-          <div id="calendarGrid" class="calendar-grid"></div>
-          <ul id="classList" class="class-list"></ul>
-        </section>
-
-        <section class="card" aria-labelledby="modules-title">
-          <div class="row-between">
-            <h2 id="modules-title">Ruta de módulos</h2>
-            <p id="progressLabel" class="badge"></p>
-          </div>
-          <div id="moduleTabs" class="module-tabs"></div>
-          <article id="moduleDetail" class="module-detail"></article>
-        </section>
+      <section class="card" aria-labelledby="modules-title">
+        <h2 id="modules-title">Módulos del programa</h2>
+        <div id="modulesContainer" class="modules"></div>
       </section>
     </main>
 
@@ -64,8 +56,8 @@
           <input type="password" name="password" minlength="6" required />
         </label>
         <menu>
-          <button type="button" id="cancelLogin">Cancelar</button>
-          <button class="primary" type="submit">Entrar</button>
+          <button value="cancel">Cancelar</button>
+          <button class="primary" value="default">Entrar</button>
         </menu>
         <p id="loginStatus" role="status"></p>
       </form>
