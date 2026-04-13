@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psicotrading Academy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Programa premium · Psicotrading</p>
+        <h1>Mindset para Trading: entrenamiento integral en 3 módulos</h1>
+        <p>
+          Una plataforma para transformar tu psicología operativa con clases en
+          vivo, vídeos guiados y meditaciones aplicadas al mercado.
+        </p>
+      </div>
+      <div class="hero-actions">
+        <button id="openLogin" class="primary">Iniciar sesión</button>
+        <button id="logoutButton" class="ghost hidden">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="welcomeCard" class="card">
+        <h2>Bienvenido/a al curso</h2>
+        <p>
+          Ingresa con tu correo para desbloquear el calendario, los 3 módulos y
+          las 30 lecciones (vídeo + meditación).
+        </p>
+      </section>
+
+      <section id="dashboard" class="hidden" aria-live="polite">
+        <section class="card" aria-labelledby="live-title">
+          <div class="row-between">
+            <h2 id="live-title">Calendario de clases en vivo</h2>
+            <span id="calendarLabel" class="badge"></span>
+          </div>
+          <div id="calendarGrid" class="calendar-grid"></div>
+          <ul id="classList" class="class-list"></ul>
+        </section>
+
+        <section class="card" aria-labelledby="modules-title">
+          <div class="row-between">
+            <h2 id="modules-title">Ruta de módulos</h2>
+            <p id="progressLabel" class="badge"></p>
+          </div>
+          <div id="moduleTabs" class="module-tabs"></div>
+          <article id="moduleDetail" class="module-detail"></article>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="loginModal">
+      <form id="loginForm" method="dialog">
+        <h2>Iniciar sesión</h2>
+        <label>
+          Correo electrónico
+          <input type="email" name="email" placeholder="tu@email.com" required />
+        </label>
+        <label>
+          Contraseña
+          <input type="password" name="password" minlength="6" required />
+        </label>
+        <menu>
+          <button type="button" id="cancelLogin">Cancelar</button>
+          <button class="primary" type="submit">Entrar</button>
+        </menu>
+        <p id="loginStatus" role="status"></p>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

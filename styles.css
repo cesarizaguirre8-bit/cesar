@@ -1,0 +1,250 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hero {
+  background: linear-gradient(140deg, #0ea5e9, #1d4ed8 55%, #312e81);
+  color: white;
+  padding: 2.75rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero p {
+  max-width: 62ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.77rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+main {
+  max-width: 1120px;
+  margin: 1.2rem auto 2.2rem;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+  padding: 1rem 1.2rem;
+}
+
+.row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.32rem 0.7rem;
+  background: #e0f2fe;
+  color: #0c4a6e;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.calendar-grid {
+  margin-top: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(34px, 1fr));
+  gap: 0.3rem;
+}
+
+.day,
+.day-name {
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.45rem 0;
+}
+
+.day-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.day {
+  background: #f1f5f9;
+  font-size: 0.85rem;
+}
+
+.day.live {
+  background: #dbeafe;
+  font-weight: 700;
+  color: #1d4ed8;
+  border: 1px solid #93c5fd;
+}
+
+.class-list {
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.class-list li {
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  padding: 0.65rem;
+  background: #f8fbff;
+}
+
+.module-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.tab {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: white;
+}
+
+.module-detail {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0.9rem;
+}
+
+.lessons {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.lesson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #f0f9ff;
+  padding: 0.65rem;
+}
+
+.lesson.done {
+  background: #ecfdf5;
+  border-color: #86efac;
+}
+
+.lesson h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+button,
+.action {
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary,
+.action.video {
+  background: #2563eb;
+  color: white;
+}
+
+.ghost {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: white;
+}
+
+.action.meditation {
+  background: #0f766e;
+  color: white;
+}
+
+.action.complete {
+  background: #166534;
+  color: white;
+}
+
+dialog {
+  border: none;
+  border-radius: 12px;
+  width: min(92vw, 360px);
+}
+
+dialog::backdrop {
+  background: rgba(2, 6, 23, 0.7);
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+input {
+  width: 100%;
+  margin-top: 0.2rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 0.55rem;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+#loginStatus {
+  min-height: 1.2rem;
+  margin: 0;
+  color: #0f766e;
+}
